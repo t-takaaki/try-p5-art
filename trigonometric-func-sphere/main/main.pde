@@ -19,6 +19,7 @@ void draw(){
     // 角度をラジアンに
     float radianT = radians(t);
     // 点の座標を計算
+    // 単位円に半径200をかけて円を作る
     float x = radius * cos(radianT);
     float y = radius * sin(radianT);
     // 点を描画
