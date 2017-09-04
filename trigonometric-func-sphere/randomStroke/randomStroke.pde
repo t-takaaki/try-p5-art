@@ -1,3 +1,5 @@
+// see: http://p5aholic.hatenablog.com/entry/2015/06/15/194250
+
 float velocity = 0;        // tに足す値
 float acceleration = 0.05; // velocityに足す値
 
