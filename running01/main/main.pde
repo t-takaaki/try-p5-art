@@ -41,7 +41,7 @@ void setup () {
 
   ampx = 0.0;
   ampy = 0.0;
-  ampz = 4000.0;
+  ampz = 4000.0; // 横方向のうねり幅を設定
 
   pn_time = 0.0;
 }
@@ -99,10 +99,14 @@ void draw () {
         enx = lines.get (i - 1).px;
         eny = lines.get (i - 1).py;
         enz = lines.get (i - 1).pz;
+        /*
+        // 未使用変数と思われる
         dtx = lines.get (i).dx;
         dty = lines.get (i).dy;
         dtz = lines.get (i).dz;
+        */
         beginShape ();
+        // 道を描く
         vertex (stx - 10, sty, stz);
         vertex (enx - 10, eny, enz);
         vertex (enx + 10, eny, enz);
@@ -113,6 +117,7 @@ void draw () {
 
     strokeWeight (1);
 
+    // 地平線を描く
     stroke (180);
     line (-10000, -20, pz - 1000, 10000, -20, pz - 1000);
     stroke (140);
